@@ -27,6 +27,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	min-width: 100vw;
+	background-color: var(--very-light-gray);
 	color: var(--transparent-white);
 	font-family: var(--lexend-deca);
 	font-size: 1.5rem;
