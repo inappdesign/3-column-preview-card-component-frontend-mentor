@@ -1,0 +1,177 @@
+:root {
+	/* colors */
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray: hsl(0, 0%, 95%);
+
+	/* fonts */
+	--lexend-deca: "Lexend Deca", sans-serif;
+	--big-shoulders-display: "Big Shoulders Display", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	min-height: 100vh;
+	min-width: 100vw;
+	color: var(--transparent-white);
+	font-family: var(--lexend-deca);
+	font-size: 1.5rem;
+	font-weight: 400;
+	padding: 8.8rem 0;
+	justify-content: center;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	min-height: 50rem;
+	max-width: 32.7rem;
+	padding: 4.8rem 4.75rem;
+}
+
+.card:first-child {
+	border-top-right-radius: 0.8rem;
+	border-top-left-radius: 0.8rem;
+}
+
+.card:last-child {
+	border-bottom-right-radius: 0.8rem;
+	border-bottom-left-radius: 0.8rem;
+}
+
+.card > img {
+	margin-bottom: 3.5rem;
+}
+
+.card > h1 {
+	font-family: var(--big-shoulders-display);
+	font-size: 4rem;
+	margin-bottom: 2.5rem;
+	font-weight: 700;
+	color: var(--very-light-gray);
+}
+
+.card > p {
+	line-height: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.sedans-card {
+	background-color: var(--bright-orange);
+}
+
+.suv-card {
+	background-color: var(--dark-cyan);
+}
+
+.luxury-card {
+	background-color: var(--very-dark-cyan);
+}
+
+.btn {
+	width: 14.6rem;
+	height: 4.8rem;
+	border-radius: 2.5rem;
+	border: solid var(--very-light-gray) 0.1rem;
+	font-size: 1.5rem;
+	transition: background-color 0.1s;
+	position: relative;
+	overflow: hidden;
+}
+
+.btn::before {
+	content: "";
+	position: absolute;
+	background-color: var(--very-light-gray);
+	width: 100%;
+	height: 50%;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%) rotate(120deg);
+	transition: background-color 0.3s ease;
+}
+
+.btn:active::before {
+	transform: translateX(100%) rotate(120deg);
+	transition: transform 0.5s ease;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.btn:active {
+	background-color: transparent;
+	color: var(--white);
+}
+
+.sedans-btn {
+	color: var(--bright-orange);
+}
+
+.suv-btn {
+	color: var(--dark-cyan);
+}
+
+.luxury-btn {
+	color: var(--very-dark-cyan);
+}
+
+.attribution {
+	color: var(--dark-cyan);
+	min-width: 100%;
+	text-align: center;
+	font-size: 1rem;
+	position: absolute;
+	bottom: 0;
+}
+
+@media (min-width: 57.5rem) {
+	main {
+		flex-direction: row;
+	}
+
+	.card {
+		max-height: 50rem;
+		max-width: 30.7rem;
+	}
+
+	.luxury-card {
+		flex-basis: 100%;
+	}
+
+	.card > p {
+		margin-bottom: 8.3rem;
+	}
+
+	.card:first-child {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 0.8rem;
+		border-top-left-radius: 0.8rem;
+	}
+
+	.card:last-child {
+		border-bottom-right-radius: 0.8rem;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 0.8rem;
+	}
+}
