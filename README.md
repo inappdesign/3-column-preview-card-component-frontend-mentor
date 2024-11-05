@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My solution on Frontend Mentor]()
-- Live Site URL: [Live version of my solution]()
+- Solution URL: [My solution on Frontend Mentor](https://www.frontendmentor.io/solutions/3-column-preview-card-component-ayXMu-nuhs)
+- Live Site URL: [Live version of my solution](https://3-column-preview-card-component-frontend-mentor.vercel.app/)
 
 ## My process
 
